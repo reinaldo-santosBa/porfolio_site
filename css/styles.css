@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size:100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background:#1e2025;
+}
+
+.menu{
+    width: 60px;
+    position: fixed;
+    height:100%;
+    min-height: 100vh;
+    transition: 1s;
+    background-color: #fff;
+}
+
+.menu .menuToogle{
+    border-bottom: 1px solid #1e2025;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display:flex;
+    transition: 1s;
+
+    flex-direction: column;
+}
+.menu .menuToogle span{
+    background-color: #1e2025;
+    width:40px;
+    height:3px;
+    transition: 1s;
+}
+.menu .menuToogle span:nth-child(1){
+    margin-top: 0;
+    transition: 1s;
+}
+.menu .menuToogle span:nth-child(2){
+    margin-top: 8px;
+    transition: 1s;
+}
+.menu .menuToogle span:nth-child(3){
+    margin-top: 8px;
+    transition: 1s;
+}
+.menu .menuContainer{
+    margin-top:60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+}
+.menu .menuContainer ul{
+    list-style: none;
+}
+.menu .menuContainer ul li{
+    margin-top:20px;
+    transition: 1s;
+}
+.menu .menuContainer ul li a{
+    color: #393c42;
+    font-size: 1.2em;
+    margin-top:20px;
+}
+.menu .menuContainer ul li:hover{
+    transform: translate(20px,20px);
+    padding:20px;
+    border-radius:20%;
+}
+.menu .menuContainer ul li:hover:nth-child(1){
+    background-color:#db4a39;
+    color:#fff;
+}
+.menu .menuContainer ul li:hover:nth-child(1) a{
+    color:#fff;
+}
+.menu .menuContainer ul li:hover:nth-child(2){
+    background-color:#00acee;
+    color:#fff;
+}
+.menu .menuContainer ul li:hover:nth-child(2) a{
+    color:#fff;
+
+}
+.menu .menuContainer ul li:hover:nth-child(3){
+    background-color:#25D366;
+    color:#fff;
+}
+.menu .menuContainer ul li:hover:nth-child(3) a{
+    color:#fff;
+}
+.menu .menuContainer ul li:hover:nth-child(4){
+    background-color:#F4B400;
+    color:#fff;
+}
+.menu .menuContainer ul li:hover:nth-child(4) a{
+    color:#fff;
+}
