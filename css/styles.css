@@ -67,6 +67,7 @@ body {
 .menu .menuContainer ul li{
     margin-top:20px;
     transition: 1s;
+    cursor:pointer;
 }
 .menu .menuContainer ul li a{
     color: #393c42;
@@ -78,32 +79,99 @@ body {
     padding:20px;
     border-radius:20%;
 }
+.menu .menuContainer ul .li:hover{
+    border-radius:10px;
+}
+.liClick1{
+    transform: translate(20px,20px);
+    padding:20px;
+    border-radius:20%;
+    background-color:#db4a39;
+    color:#fff !important;
+    border-radius:10px;
+
+}
+
+.liClick2{
+    transform: translate(20px,20px);
+    padding:20px;
+    border-radius:20%;
+    background-color:#00acee;
+    color:#fff !important;
+    border-radius:10px;
+
+}
+
+.liClick3{
+    transform: translate(20px,20px);
+    padding:20px;
+    border-radius:20%;
+    background-color:#25D366;
+    color:#fff !important;
+    border-radius:10px;
+
+}
+
+.liClick4{
+    transform: translate(20px,20px);
+    padding:20px;
+    border-radius:20%;
+    background-color:#F4B400;
+    color:#fff !important;
+    border-radius:10px;
+
+}
+
+.liClick2 a{
+    color:#FFF !important;
+}
+
 .menu .menuContainer ul li:hover:nth-child(1){
     background-color:#db4a39;
     color:#fff;
 }
-.menu .menuContainer ul li:hover:nth-child(1) a{
-    color:#fff;
-}
+
 .menu .menuContainer ul li:hover:nth-child(2){
     background-color:#00acee;
     color:#fff;
 }
-.menu .menuContainer ul li:hover:nth-child(2) a{
-    color:#fff;
 
-}
 .menu .menuContainer ul li:hover:nth-child(3){
     background-color:#25D366;
     color:#fff;
 }
-.menu .menuContainer ul li:hover:nth-child(3) a{
-    color:#fff;
-}
+
 .menu .menuContainer ul li:hover:nth-child(4){
     background-color:#F4B400;
     color:#fff;
 }
-.menu .menuContainer ul li:hover:nth-child(4) a{
+
+
+.home{
+    width: 100vw;
+    height: 100vh;
+    background-image:url("../images/bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home h1{
+    position:absolute;
+    top:40%;
+    left:20%;
+    font-size:3em;
     color:#fff;
+    font-weight:bold;
+    letter-spacing: 15px;
+}
+.home h2{
+    position:absolute;
+    top:50%;
+    font-size:1.5em;
+    font-weight:500;
+    color:#fff;
+    left:-50%;
+    transition: 3.5s;
+    letter-spacing: 5px;
+
 }
