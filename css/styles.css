@@ -175,3 +175,93 @@ body {
     letter-spacing: 5px;
 
 }
+.chat_area{
+    position:absolute;
+    bottom:0;
+    right:30px;
+    padding:20px 20px 0 20px;
+    border:none;
+    color:#f1f1f1;
+    background-color:#00acee99;
+    border-radius: 10px 10px 0 0;
+}
+.chat_area button{
+    color:#fff;
+    background-color:transparent;
+    cursor:pointer;
+    border: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 100%; 
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.chat_area .chat{
+    height:400px;
+    width:300px;
+    background-color:#ffffff;
+    margin-top: 20px;
+    color:#101010;
+    padding:10px 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+.chat_area .chat .areaChat{
+    border: 1px solid #c1c1c1;
+    flex: 5;
+    position: relative;
+    overflow-y: scroll;
+
+}
+.chat_area .chat .painelMsg{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+.chat_area .chat .msgArea{
+    flex: 9;
+}
+.chat_area .chat .msgArea input{
+    outline: none;
+    margin-top:10px;
+    border-radius: 20px;
+    padding: 5px 10px; 
+    border: 1px solid #c1c1c1;
+    width:100%;  
+}
+.mensageButton{
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border-radius: 50%;
+
+}
+.mensageButton i{
+    cursor: pointer;
+    padding:20px 0px;
+}
+.chat .areaChat .msgBot{
+    padding:10px;
+    margin: 10px;
+    background-color:#00acee99;
+    border-radius:10px;
+}
+.areaMsgBot{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    padding:10px;
+}
+.areaMsgBot i{
+    font-size:1.5em;
+    padding:10px;
+    background-color:#00acee99;
+    color:#121212;
+    border-radius:50%;
+
+}

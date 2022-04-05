@@ -139,3 +139,82 @@ function clickMenu(e) {
         break;
     }
 }
+let mensageButton = document.querySelector(".mensageButton i");
+
+let areaMsgBot = document.querySelector(".areaMsgBot");
+
+
+
+let areaChat = document.querySelector(".areaChat");
+
+let lastChild = areaChat.lastChild
+
+let stage = 0;
+
+function bot(msg){
+  let divBot = document.createElement("div");
+  divBot.classList.add("areaMsgBot");
+  let i = document.createElement("i");
+  i.classList.add("fa-solid");
+  i.classList.add("fa-user");
+  divBot.appendChild(i);
+
+  let msgBot = document.createElement("div");
+  msgBot.classList.add("msgBot");
+  divBot.appendChild(msgBot);
+
+  let msgBotP = document.createElement("p")
+  msgBotP.innerHTML = "" + msg;
+  msgBot.appendChild(msgBotP);
+  areaChat.appendChild(divBot);
+
+}
+
+function robot(msg){
+
+  let divBot = document.createElement("div");
+  divBot.classList.add("areaMsgBot");
+
+  let msgBot = document.createElement("div");
+  msgBot.classList.add("msgBot");
+  divBot.appendChild(msgBot);
+
+  let msgBotP = document.createElement("p")
+  msgBotP.innerHTML = "" + msg;
+  msgBot.appendChild(msgBotP);
+  areaChat.appendChild(divBot);
+
+  let i = document.createElement("i");
+  i.classList.add("fa-solid");
+  i.classList.add("fa-robot");
+  divBot.appendChild(i);
+  areaChat.insertBefore(divBot, lastChild)
+}
+
+function robotTime(){
+  robot("1 - Falar com atendendte \n"   +
+  "2 - Duvidas sobre os sites \n" +
+  "3 - Duvidas sobre os Apps")
+}
+
+mensageButton.addEventListener('click', function() {
+  switch(stage){
+    case 0:
+      bot("Olá sim adoraria");
+      robotTime();
+      stage++;
+    break;
+  }
+
+  console.log(stage);
+});
+
+/*
+<div class="areaMsgBot">
+<div class="msgBot">
+    <p>
+        Olá bem vindo ao meu site precisa de ajuda?
+    </p>
+</div>
+<i class="fa-solid fa-robot">s
+*/
