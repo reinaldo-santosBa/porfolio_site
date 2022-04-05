@@ -139,7 +139,7 @@ function clickMenu(e) {
         break;
     }
 }
-let mensageButton = document.querySelector(".mensageButton i");
+let mensageButton = document.querySelector(".msgArea button i");
 
 let areaMsgBot = document.querySelector(".areaMsgBot");
 
@@ -188,33 +188,31 @@ function robot(msg){
   i.classList.add("fa-solid");
   i.classList.add("fa-robot");
   divBot.appendChild(i);
-  areaChat.insertBefore(divBot, lastChild)
+
 }
 
-function robotTime(){
-  robot("1 - Falar com atendendte \n"   +
-  "2 - Duvidas sobre os sites \n" +
-  "3 - Duvidas sobre os Apps")
-}
+let textInput = document.getElementById("textInput").value; 
 
-mensageButton.addEventListener('click', function() {
+let texto = textInput.value;
+
+mensageButton.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  let br = document.createElement("br");
   switch(stage){
     case 0:
       bot("Olá sim adoraria");
-      robotTime();
+      robot(
+        "1 - Falar com atendente <br>"+
+        "2 - Duvidas sobre os sites <br>"+
+        "3 - Duvidas sobre os Apps"
+      )
       stage++;
+
+      console.log(""+document.getElementById("textInput").value);
     break;
   }
 
   console.log(stage);
 });
 
-/*
-<div class="areaMsgBot">
-<div class="msgBot">
-    <p>
-        Olá bem vindo ao meu site precisa de ajuda?
-    </p>
-</div>
-<i class="fa-solid fa-robot">s
-*/
