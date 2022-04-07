@@ -197,22 +197,42 @@ let texto = textInput.value;
 
 mensageButton.addEventListener('click', function(e) {
   e.preventDefault();
-
+  let msg = document.getElementById("textInput").value;
+  document.getElementById("textInput").value = "";
   let br = document.createElement("br");
   switch(stage){
     case 0:
-      bot("Olá sim adoraria");
-      robot(
-        "1 - Falar com atendente <br>"+
-        "2 - Duvidas sobre os sites <br>"+
-        "3 - Duvidas sobre os Apps"
-      )
+      bot(msg);
+      areaChat.scrollTop = areaChat.scrollHeight
+      criarBotTela(msg,stage);
       stage++;
-
-      console.log(""+document.getElementById("textInput").value);
     break;
   }
 
   console.log(stage);
 });
 
+function criarBotTela(msgs,stages){
+  setTimeout(()=>{
+    switch(stages){
+      case 0:
+      if(msgs == "Olá" || msgs == "Ola" || msgs == "Oi"){
+
+        robot(
+      
+          "1 - Falar com atendente <br>"+
+          "2 - Duvidas sobre os sites <br>"+
+          "3 - Duvidas sobre os Apps"
+        )
+      
+      }else{
+
+          robot("Digite Olá, Ola ou Oi");
+          stage--;
+
+      }
+    break;
+  }
+  areaChat.scrollTop = areaChat.scrollHeight
+  },500)
+}
